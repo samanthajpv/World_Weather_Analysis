@@ -30,6 +30,7 @@ The purpose of this project was to gather website data using API (Application Pr
 A set of random latitude and longitude combinations were generated using the ```np.random.uniform()``` method. With the CitiPy module, the nearest city to the coordinates was identified. The OpenWeatherMap API call was made to request weather information on the cities where data was returned in JSON (JavaScript Object Notation) format. Information gathered was transformed into a Pandas DataFrame (see image below) and exported as a csv file.
 <p align="center">
     <img src="https://github.com/samanthajpv/World_Weather_Analysis/blob/90127fe95f78bc29c00ef261cbce144a2d3486de/Additional/Weather_Database.png" width="600" height="275" align="center">
+    <h5 align="center">Weather DataFrame</h5>
 </p>
 
 ### Vacation Search
@@ -38,22 +39,26 @@ Input statements were created to prompt the user to enter desired minimum and ma
 Google Maps API - Nearby Search request was made with the parameters latitude and longitude as location, the type "lodging", and a specified radius. From the JSON formatted data, hotel names were added to the DataFrame (see image below). Rows were dropped for cities where no nearby hotel was found and clean DataFrame was exported as a csv file.
 <p align="center">
     <img src="https://github.com/samanthajpv/World_Weather_Analysis/blob/90127fe95f78bc29c00ef261cbce144a2d3486de/Additional/Vacation_Search.png" width="600" height="275" align="center">
+    <h5 align="center">Weather DataFrame with Hotel Information</h5>
 </p>
 
 With the use of gmaps, a marker layer map was created with pop-up markers for each city. The info box contains the hotel name, city, country, and weather information.
 <p align="center">
     <img src="https://github.com/samanthajpv/World_Weather_Analysis/blob/a3b09720de0e6ce98e7190b2d010be4d5109be55/Vacation_Search/WeatherPy_vacation_map.png" width="700" height="280" align="center">
+    <h5 align="center">Google Map with Pop-Up Marker for Each City</h5>
 </p>
 
 ### Vacation Itinerary
 From the WeatherPy_Vacation file, four cities were selected as the possible travel route where a separate DataFrame was created for each city. The ```to_numpy()``` function was used to get the city coordinates as tuples for the creation of a direction layer map as seen below.
 <p align="center">
     <img src="https://github.com/samanthajpv/World_Weather_Analysis/blob/a3b09720de0e6ce98e7190b2d010be4d5109be55/Vacation_Itinerary/WeatherPy_travel_map.png" width="700" height="400" align="center">
+    <h5 align="center">Google Map with Travel Route</h5>
 </p>
 
 The four separate DataFrames were then combined using the ```concat()``` function. This was used to create the marker layer map of the cities on the travel route.
 <p align="center">
     <img src="https://github.com/samanthajpv/World_Weather_Analysis/blob/a3b09720de0e6ce98e7190b2d010be4d5109be55/Vacation_Itinerary/WeatherPy_travel_map_markers.png" width="700" height="400" align="center">
+    <h5 align="center">Google Map of Travel Destinations with Hotel Information</h5>
 </p>
 
 ## References
