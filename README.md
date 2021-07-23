@@ -52,7 +52,7 @@ With the use of gmaps, a marker layer map was created with pop-up markers for ea
 From the WeatherPy_Vacation file, four cities were selected as the possible travel route where a separate DataFrame was created for each city. The ```to_numpy()``` function was used to get the city coordinates as tuples for the creation of a direction layer map as seen below.
 <p align="center">
     <img src="https://github.com/samanthajpv/World_Weather_Analysis/blob/a3b09720de0e6ce98e7190b2d010be4d5109be55/Vacation_Itinerary/WeatherPy_travel_map.png" width="700" height="400" align="center">
-    <h5 align="center">Google Map with Travel Route</h5>
+    <h5 align="center">Google Map of Travel Route</h5>
 </p>
 
 The four separate DataFrames were then combined using the ```concat()``` function. This was used to create the marker layer map of the cities on the travel route.
